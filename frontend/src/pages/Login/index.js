@@ -21,15 +21,10 @@ import { AuthContext } from "../../context/Auth/AuthContext";
 import toastError from "../../errors/toastError";
 import api from "../../services/api";
 
-const Copyright = ({ companyName, companyUrl }) => {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {new Date().getFullYear()}
-      {" - "}
-      <Link color="inherit" href={companyUrl || "https://github.com/rtenorioh/Press-Ticket"}>
-        {companyName || "Press Ticket"}
-      </Link>
-      {"."}
+      {new Date().getFullYear()} - Grupo Murad
     </Typography>
   );
 };
@@ -223,7 +218,7 @@ const Login = () => {
           </Grid>
         </form>
       </div>
-      <Box mt={5}><Copyright companyName={companyData.name} companyUrl={companyData.url} /></Box>
+      <Box mt={5}><Copyright /></Box>
     </Container>
   );
 };
